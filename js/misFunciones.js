@@ -60,7 +60,7 @@ function guardarInformacionCategorias(){
 ///////////////////Funciones Motorbikes//////////////////////////////////////
 function traerInformacionMotorbikes(){
     $.ajax({
-        url:"http://129.151.120.50:8080/api/Bike/all",
+        url:"http://129.151.120.50:8080/api/Motorbike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
