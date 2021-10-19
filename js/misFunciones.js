@@ -99,7 +99,7 @@ function guardarInformacionMotorbikes(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.120.50:8080/api/Morobike/save",
+        url:"http://129.151.120.50:8080/api/Motorbike/save",
        
         
         success:function(response) {
