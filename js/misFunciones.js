@@ -1,6 +1,7 @@
+///////////////////Funciones Categorias//////////////////////////////////////
 function traerInformacionCategorias(){
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://129.151.120.50:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -35,7 +36,7 @@ function guardarInformacionCategorias(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://localhost:8080/api/Category/save",
+        url:"http://129.151.120.50:8080/api/Category/save",
        
         
         success:function(response) {
@@ -56,20 +57,20 @@ function guardarInformacionCategorias(){
 
 }
 
-///////////////////Bikes//////////////////////////////////////
-function traerInformacionBikes(){
+///////////////////Funciones Motorbikes//////////////////////////////////////
+function traerInformacionMotorbikes(){
     $.ajax({
-        url:"http://localhost:8080/api/Bike/all",
+        url:"http://129.151.120.50:8080/api/Bike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
             console.log(respuesta);
-            pintarRespuestaBikes(respuesta);
+            pintarRespuestaMotorbikes(respuesta);
         }
     });
 }
 
-function pintarRespuestaBikes(respuesta){
+function pintarRespuestaMotorbikes(respuesta){
 
     let myTable="<table>";
     for(i=0;i<respuesta.length;i++){
@@ -84,12 +85,12 @@ function pintarRespuestaBikes(respuesta){
     $("#resultado2").html(myTable);
 }
 
-function guardarInformacionBikes(){
+function guardarInformacionMotorbikes(){
     let var3 = {
-        name:$("#Bname").val(),
-        brand:$("#Bbrand").val(),
-        year:$("#Byear").val(),
-        description:$("#Bdescription").val(),
+        name:$("#Mname").val(),
+        brand:$("#Mbrand").val(),
+        year:$("#Myear").val(),
+        description:$("#Mdescription").val(),
         };
       
         $.ajax({
@@ -98,7 +99,7 @@ function guardarInformacionBikes(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://localhost:8080/api/Bike/save",
+        url:"http://129.151.120.50:8080/api/Bike/save",
        
         
         success:function(response) {
@@ -118,10 +119,10 @@ function guardarInformacionBikes(){
         });
 
 }
-//////////////////////Clientes//////////////////////////////////
+//////////////////////Funciones Clientes//////////////////////////////////
 function traerInformacionClientes(){
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://129.151.120.50:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -160,7 +161,7 @@ function guardarInformacionClientes(){
         dataType: 'JSON',
         data: JSON.stringify(var4),
         
-        url:"http://localhost:8080/api/Client/save",
+        url:"http://129.151.120.50:8080/api/Client/save",
        
         
         success:function(response) {
