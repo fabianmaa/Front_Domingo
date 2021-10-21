@@ -103,7 +103,7 @@ function guardarInformacionMotorbikes(){
        
         
         success:function(response) {
-                console.log(response);
+            console.log(response);
             console.log("Se guardo correctamente");
             alert("Se guardo correctamente");
             window.location.reload()
@@ -209,7 +209,7 @@ function pintarRespuestaMensajes(respuesta){
 
 function guardarInformacionMensajes(){
     let var5 = {
-        messageText:$("#message").val(),
+        messageText:$("#MmessageText").val(),
         };
       
         $.ajax({
