@@ -52,7 +52,7 @@ function guardarInformacionMotorbikes() {
 			alert("Todos los campos de la Moto son obligatorios");
 		}
 	else{
-    // let dataToSend = JSON.stringify(myData1);
+    let dataToSend = JSON.stringify(myData1);
     $.ajax({
         type: "POST",
         contentType: "application/json; charset=utf-8",
