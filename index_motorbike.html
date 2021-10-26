@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+    <title>Reto 3</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosregistro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+</head>
+<body>
+    <!–– LLamado HTML para cada formulario-->
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Formularios</a>
+                    <ul class="submenu">
+                        <li><a href="index_motorbike.html">Motorbikes</a>
+						<li><a href="index_categoria.html">Categorias</a>	
+                        <li><a href="index_cliente.html">Clientes</a>
+                        <li><a href="index_mensaje.html">Mensajes</a>
+						<li><a href="index_reservacion.html">Reservaciones</a>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!–– Formulario de creacion de un cliente -->
+    <section class="form-registro">
+        <h1>Registrar Motorbike</h1>
+        <div>
+            <input class="controles" type="text" id="Mname" placeholder="Ingrese nombre modelo de Moto" />
+            <input class="controles" type="text" id="Mbrand" placeholder="Ingrese marca de la moto" />
+            <input class="controles" type="number" id="Myear" placeholder="Ingrese año de la moto" />
+			<input class="controles" type="text" id="Mdescription" placeholder="Ingrese una descripción de la Moto" />
+
+            <!–– Botones -->
+            <button class="btnregistro" onclick="guardarInformacionMotorbikes()">Guardar</button>
+            <button class="btnactualizar" onclick="editarInformacionMotorbikes()">Editar</button>
+            <button class="btnmostrar" onclick="traerInformacionMotorbikes()">Consultar</button>
+        </div>
+    </section>
+    <!–– El resultado -->
+    <section class="muestra">
+        <table id="resultado1"></table>
+    </section>
+    <!–– Fin Formulario cliente -->
+</body>
+</html>

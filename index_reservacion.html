@@ -15,18 +15,36 @@
     <header>
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="index.html" >Inicio</a></li>
-                <li><a href="#" >Formularios</a>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Formularios</a>
                     <ul class="submenu">
                         <li><a href="index_motorbike.html">Motorbikes</a>
 						<li><a href="index_categoria.html">Categorias</a>	
                         <li><a href="index_cliente.html">Clientes</a>
                         <li><a href="index_mensaje.html">Mensajes</a>
-						<li><a href="index_reservacion.html">Reservaciones</a>	
+						<li><a href="index_reservacion.html">Reservaciones</a>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
+    <!–– Formulario de creacion de un cliente -->
+    <section class="form-registro">
+        <h1>Registrar Reservación</h1>
+        <div>
+            <input class="controles" type="date" id="startDate" placeholder="Fecha inicio" />
+			<input class="controles" type="date" id="devolutionDate" placeholder="Fecha devolución" />
+
+            <!–– Botones -->
+            <button class="btnregistro" onclick="guardarInformacionReservaciones()">Guardar</button>
+            <button class="btnactualizar" onclick="editarInformacionReservaciones()">Editar</button>
+            <button class="btnmostrar" onclick="traerInformacionReservaciones()">Consultar</button>
+        </div>
+    </section>
+    <!–– El resultado -->
+    <section class="muestra">
+        <table id="resultado5"></table>
+    </section>
+    <!–– Fin Formulario cliente -->
 </body>
 </html>

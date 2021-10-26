@@ -15,18 +15,36 @@
     <header>
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="index.html" >Inicio</a></li>
-                <li><a href="#" >Formularios</a>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Formularios</a>
                     <ul class="submenu">
                         <li><a href="index_motorbike.html">Motorbikes</a>
 						<li><a href="index_categoria.html">Categorias</a>	
                         <li><a href="index_cliente.html">Clientes</a>
                         <li><a href="index_mensaje.html">Mensajes</a>
-						<li><a href="index_reservacion.html">Reservaciones</a>	
+						<li><a href="index_reservacion.html">Reservaciones</a>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
+    <!–– Formulario de creacion de un cliente -->
+    <section class="form-registro">
+        <h1>Registrar Cetegoría</h1>
+        <div>
+            <input class="controles" type="text" id="Cname" placeholder="Ingrese nombre de Categoría" />
+            <input class="controles" type="text" id="Cdescription" placeholder="Ingrese descripción de Categoría" />
+
+            <!–– Botones -->
+            <button class="btnregistro" onclick="guardarInformacionCategorias()">Guardar</button>
+            <button class="btnactualizar" onclick="editarInformacionCategorias()">Editar</button>
+            <button class="btnmostrar" onclick="traerInformacionCategorias()">Consultar</button>
+        </div>
+    </section>
+    <!–– El resultado -->
+    <section class="muestra">
+        <table id="resultado2"></table>
+    </section>
+    <!–– Fin Formulario cliente -->
 </body>
 </html>
