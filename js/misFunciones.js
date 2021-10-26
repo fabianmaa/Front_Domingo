@@ -171,7 +171,7 @@ function guardarInformacionCategorias() {
         description:$("#Cdescription").val(),
     };
 	
-	if (myData2.name=='' || myData2.description=='' ){
+	if (myData2.Cname=='' || myData2.Cdescription=='' ){
 			alert("Todos los campos de la Categoría son obligatorios");
 		}
 	else{
