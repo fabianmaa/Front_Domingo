@@ -63,7 +63,7 @@ function guardarInformacionMotorbikes() {
         
         success: function (items) {
             console.log(items);
-            console.log("Se guardo correctamente");
+            
             $("#resultado1").empty();
             $("#id").val("");
             $("#Mname").val("");
