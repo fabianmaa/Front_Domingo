@@ -562,6 +562,7 @@ function editarInformacionReservaciones(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado5").empty();
+	    $("#idReservation").val("");
             $("#startDate").val("");
             $("#devolutionDate").val("");
             traerInformacionReservaciones();
