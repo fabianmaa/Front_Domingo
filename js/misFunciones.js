@@ -501,9 +501,10 @@ function pintarRespuestaReservaciones(items) {
     myTable += "<th> FECHA DEVOLUCIÓN </th>";
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
-        myTable += "<td>" + items[i].startDate + "</td>";
+        myTable += "<td>" + items[i].idReservation + "</td>";
+	myTable += "<td>" + items[i].startDate + "</td>";
         myTable += "<td>" + items[i].devolutionDate + "</td>";
-	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].idReservation+ ")'> Actualizar</button>";    
+	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].idReservation + ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoReservaciones(" + items[i].idReservation + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
