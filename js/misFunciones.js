@@ -80,7 +80,7 @@ function guardarInformacionMotorbikes() {
 }//FIN POST
 
 //Funcion METODO PUT
-function editarInformacionMotorbikes() {
+function editarInformacionMotorbikes(idElemento) {
     let myData1 = {
         id:idElemento,
         name:$("#Mname").val(),
