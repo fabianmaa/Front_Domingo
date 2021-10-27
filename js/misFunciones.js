@@ -11,7 +11,7 @@ function traerInformacionMotorbikes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaMotorbikes(items);
-	let $select = $("#select-motorbike");
+	let $select = $("#select-category");
             $.each(items, function (id, name) {
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
                 console.log("select "+name.id);
@@ -149,7 +149,7 @@ function traerInformacionCategorias() {
         success: function (items) {
             console.log(items);
             pintarRespuestaCategorias(items);
-	let $select = $("#select-category");
+	let $select = $("#select-motorbike");
             $.each(items, function (id, name) {
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
                 console.log("select "+name.id);
