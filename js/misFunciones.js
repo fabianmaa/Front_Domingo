@@ -11,7 +11,7 @@ function traerInformacionMotorbikes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaMotorbikes(items);
-	let $select = $("#select-ortopedic");
+	let $select = $("#select-motorbike");
             $.each(items, function (id, name) {
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
                 console.log("select "+name.id);
