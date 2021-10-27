@@ -196,7 +196,7 @@ function guardarInformacionCategorias() {
 }//FIN POST
 
 //Funcion METODO PUT
-function editarInformacionCategorias() {
+function editarInformacionCategorias(idElemento	) {
     let myData2 = {
         id:idElemento,
         name:$("#Cname").val(),
@@ -430,7 +430,7 @@ function guardarInformacionMensajes() {
 }//FIN POST
 
 //Funcion METODO PUT
-function editarInformacionMensajes() {
+function editarInformacionMensajes(idElemento) {
     let myData4 = {
         messageText:$("#MmessageText").val(),
         
@@ -539,7 +539,7 @@ function guardarInformacionReservaciones() {
 }//FIN POST
 
 //Funcion METODO PUT
-function editarInformacionReservaciones() {
+function editarInformacionReservaciones(idElemento) {
     let myData5 = {
         idReservation:idElemento,
         startDate:$("#startDate").val(),
