@@ -13,8 +13,8 @@ function traerInformacionMotorbikes() {
             pintarRespuestaMotorbikes(items);
 	let $select = $("#select-category");
             $.each(items, function (categoryId, name) {
-                $select.append('<option value='+name.id+'>'+name.name+'</option>');
-                console.log("select "+name.id);
+                $select.append('<option value='+name.categoryId+'>'+name.name+'</option>');
+                console.log("select "+name.categoryId);
             }); 	
         }
     })
