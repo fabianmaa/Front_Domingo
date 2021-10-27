@@ -12,7 +12,7 @@ function traerInformacionMotorbikes() {
             console.log(items);
             pintarRespuestaMotorbikes(items);
 	let $select = $("#select-category");
-            $.each(items, function (id, name) {
+            $.each(items, function (categoryId, name) {
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
                 console.log("select "+name.id);
             }); 	
