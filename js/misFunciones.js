@@ -503,7 +503,7 @@ function pintarRespuestaReservaciones(items) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].startDate + "</td>";
         myTable += "<td>" + items[i].devolutionDate + "</td>";
-	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].id+ ")'> Actualizar</button>";    
+	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].idReservation+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoReservaciones(" + items[i].idReservation + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
