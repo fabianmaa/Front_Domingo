@@ -204,7 +204,7 @@ function editarInformacionCategorias(idElemento	) {
         description:$("#Cdescription").val(),
 
     };
-    console.log(myData);
+    console.log(myData2);
     let dataToSend = JSON.stringify(myData2);
     $.ajax({
         url: "http://129.151.120.50:8080/api/Category/update",
@@ -273,7 +273,7 @@ function pintarRespuestaClientes(items) {
         myTable += "<td>" + items[i].password + "</td>";
         myTable += "<td>" + items[i].name + "</td>";
         myTable += "<td>" + items[i].age + "</td>";
-	myTable += "<td> <button onclick='editarInformacionClientes(" + items[i].id+ ")'> Actualizar</button>";    
+	myTable += "<td> <button onclick='editarInformacionClientes(" + items[i].idClient+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoClientes(" + items[i].idClient + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
@@ -340,7 +340,7 @@ function editarInformacionClientes(idElemento) {
         success: function (items) {
             $("#resultado3").empty();
             $("#idClient").val("");
-			$("#CLemail").val("");
+	    $("#CLemail").val("");
             $("#CLpassword").val("");
             $("#CLname").val("");
             $("#CLage").val("");
