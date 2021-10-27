@@ -156,6 +156,7 @@ function pintarRespuestaCategorias(items) {
         myTable += "<tr>";
         myTable+="<td>"+items[i].name+"</td>";
         myTable+="<td>"+items[i].description+"</td>";
+	myTable += "<td> <button onclick='editarInformacionCategorias(" + items[i].id+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoCategorias(" + items[i].id + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
@@ -272,6 +273,7 @@ function pintarRespuestaClientes(items) {
         myTable += "<td>" + items[i].password + "</td>";
         myTable += "<td>" + items[i].name + "</td>";
         myTable += "<td>" + items[i].age + "</td>";
+	myTable += "<td> <button onclick='editarInformacionClientes(" + items[i].id+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoClientes(" + items[i].idClient + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
@@ -392,7 +394,8 @@ function pintarRespuestaMensajes(items) {
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].idMessage + "</td>";
-		myTable += "<td>" + items[i].messageText + "</td>";
+	myTable += "<td>" + items[i].messageText + "</td>";
+	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].id+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMensajes(" + items[i].idMessage + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
@@ -498,6 +501,7 @@ function pintarRespuestaReservaciones(items) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].startDate + "</td>";
         myTable += "<td>" + items[i].devolutionDate + "</td>";
+	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].id+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoReservaciones(" + items[i].idReservation + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
