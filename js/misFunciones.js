@@ -435,6 +435,7 @@ function guardarInformacionMensajes() {
 //Funcion METODO PUT
 function editarInformacionMensajes(idElemento) {
     let myData4 = {
+	idMessage:idElemento,    
         messageText:$("#MmessageText").val(),
         
     };
@@ -448,6 +449,7 @@ function editarInformacionMensajes(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado4").empty();
+	$("#idMessage").val("");	
             $("#MmessageText").val("");
             traerInformacionMensajes();
             alert("El Mensaje se ha Actualizado")
