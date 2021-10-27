@@ -395,7 +395,7 @@ function pintarRespuestaMensajes(items) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].idMessage + "</td>";
 	myTable += "<td>" + items[i].messageText + "</td>";
-	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].id+ ")'> Actualizar</button>";    
+	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].idMessage+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMensajes(" + items[i].idMessage + ")'> Eliminar</button>";
         myTable += "</tr>";
     }
