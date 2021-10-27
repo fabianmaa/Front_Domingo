@@ -27,6 +27,7 @@ function pintarRespuestaMotorbikes(items) {
         myTable+="<td>"+items[i].brand+"</td>";
         myTable+="<td>"+items[i].year+"</td>";
         myTable+="<td>"+items[i].description+"</td>";
+	myTable += "<td> <button onclick='editarInformacionMotorbikes(" + items[i].id+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMotorbikes(" + items[i].id+ ")'> Eliminar</button>";
         myTable += "</tr>";
 		
