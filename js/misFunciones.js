@@ -405,6 +405,9 @@ function traerInformacionMensajes() {
 function pintarRespuestaMensajes(items) {
 
     let myTable = "<table>";
+    myTable += "<th> ID MENSAJE</th>";
+    myTable += "<th> MOTO</th>";
+    myTable += "<th> CLIENTE</th>";	
     myTable += "<th> MENSAJE</th>";
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
@@ -426,7 +429,7 @@ function pintarRespuestaMensajes(items) {
 function guardarInformacionMensajes() {
     let myData4 = {
         messageText:$("#MmessageText").val(),
-	cabin: {id: +$("#select-cabin").val()},    
+	motorbike: {id: +$("#select-motorbike").val()},    
 	client: {idClient: +$("#select-client").val()},
     };
 	
