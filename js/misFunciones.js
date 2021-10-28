@@ -267,6 +267,11 @@ function traerInformacionClientes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaClientes(items);
+	    let $select = $("#select-client");
+            $.each(items, function (id, name) {
+                $select.append('<option value='+name.idClient+'>'+name.name+'</option>');
+                console.log("select "+name.idClient);
+            });	
         }
     })
 }
@@ -422,7 +427,7 @@ function guardarInformacionMensajes() {
     let myData4 = {
         messageText:$("#MmessageText").val(),
 	cabin: {id: +$("#select-cabin").val()},    
-	client: {id: +$("#select-client").val()},
+	client: {idClient: +$("#select-client").val()},
     };
 	
 	if (myData4.messageText==''){
