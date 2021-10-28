@@ -459,6 +459,9 @@ function editarInformacionMensajes(idElemento) {
     let myData4 = {
 	idMessage:idElemento,    
         messageText:$("#MmessageText").val(),
+	motorbike: {id: +$("#select-motorbike").val()},    
+	client: {idClient: +$("#select-client").val()},    
+	    
         
     };
     console.log(myData4);
@@ -471,8 +474,10 @@ function editarInformacionMensajes(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado4").empty();
-	$("#idMessage").val("");	
+	    $("#idMessage").val("");	
             $("#MmessageText").val("");
+	    $("#select-motorbike").val("");
+	    $("#select-client").val("");	
             traerInformacionMensajes();
             alert("El Mensaje se ha Actualizado")
         }
