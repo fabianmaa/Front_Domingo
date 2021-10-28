@@ -404,7 +404,9 @@ function pintarRespuestaMensajes(items) {
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].idMessage + "</td>";
-	myTable += "<td>" + items[i].messageText + "</td>";
+	myTable += "<td>" + items[i].motorbike.name + "</td>";
+	myTable += "<td>" + items[i].client.name + "</td>";    
+	myTable += "<td>" + items[i].messageText + "</td>";    
 	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].idMessage+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMensajes(" + items[i].idMessage + ")'> Eliminar</button>";
         myTable += "</tr>";
@@ -419,6 +421,8 @@ function pintarRespuestaMensajes(items) {
 function guardarInformacionMensajes() {
     let myData4 = {
         messageText:$("#MmessageText").val(),
+	cabin: {id: +$("#select-cabin").val()},    
+	client: {id: +$("#select-client").val()},
     };
 	
 	if (myData4.messageText==''){
