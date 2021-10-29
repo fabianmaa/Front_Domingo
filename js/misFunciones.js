@@ -11,11 +11,11 @@ function traerInformacionMotorbikes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaMotorbikes(items);
-	let $select = $("#select-motorbike");
-            $.each(items, function (id, name) {
-                $select.append('<option value='+name.id+'>'+name.name+'</option>');
-                console.log("select "+name.id);
-            });		
+	//let $select = $("#select-motorbike");
+            //$.each(items, function (id, name) {
+                //$select.append('<option value='+name.id+'>'+name.name+'</option>');
+                //console.log("select "+name.id);
+            //});		
         }
     })
 }
@@ -74,7 +74,7 @@ function guardarInformacionMotorbikes() {
             $("#Mname").val("");
             $("#MBrand").val("");
             $("#Myear").val("");
-			$("#Mdescription").val("");
+	    $("#Mdescription").val("");
             traerInformacionMotorbikes();
             alert("Se registró moto con éxito");
         
@@ -106,7 +106,7 @@ function editarInformacionMotorbikes(idElemento) {
             $("#Mname").val("");
             $("#MBrand").val("");
             $("#Myear").val("");
-			$("#Mdescription").val("");
+	    $("#Mdescription").val("");
             traerInformacionMotorbikes();
             alert("Se ha actualizado exitosamente")
         }
@@ -147,11 +147,11 @@ function traerInformacionCategorias() {
         success: function (items) {
             console.log(items);
             pintarRespuestaCategorias(items);
-	let $select = $("#select-category");
-            $.each(items, function (id, name) {
-                $select.append('<option value='+name.id+'>'+name.name+'</option>');
-                console.log("select "+name.id);
-            }); 	
+	//let $select = $("#select-category");
+            //$.each(items, function (id, name) {
+                //$select.append('<option value='+name.id+'>'+name.name+'</option>');
+                //console.log("select "+name.id);
+            //}); 	
         }
     })
 }
@@ -265,11 +265,11 @@ function traerInformacionClientes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaClientes(items);
-	    let $select = $("#select-client");
-            $.each(items, function (id, name) {
-                $select.append('<option value='+name.idClient+'>'+name.name+'</option>');
-                console.log("select "+name.idClient);
-            });	
+	    //let $select = $("#select-client");
+            //$.each(items, function (id, name) {
+                //$select.append('<option value='+name.idClient+'>'+name.name+'</option>');
+                //console.log("select "+name.idClient);
+            //});	
         }
     })
 }
@@ -408,8 +408,8 @@ function pintarRespuestaMensajes(items) {
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].messageText + "</td>";
-	myTable += "<td>" + items[i].motorbike.name + "</td>";
-	myTable += "<td>" + items[i].client.name + "</td>";    
+	//myTable += "<td>" + items[i].motorbike.name + "</td>";
+	//myTable += "<td>" + items[i].client.name + "</td>";    
 	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].idMessage+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMensajes(" + items[i].idMessage + ")'> Eliminar</button>";
         myTable += "</tr>";
@@ -424,8 +424,8 @@ function pintarRespuestaMensajes(items) {
 function guardarInformacionMensajes() {
     let myData4 = {
         messageText:$("#MmessageText").val(),
-	motorbike: {id: +$("#select-motorbike").val()},    
-	client: {idClient: +$("#select-client").val()},
+	//motorbike: {id: +$("#select-motorbike").val()},    
+	//client: {idClient: +$("#select-client").val()},
     };
 	
 	if (myData4.messageText==''){
@@ -442,8 +442,8 @@ function guardarInformacionMensajes() {
         success: function (items) {
             $("#resultado4").empty();
             $("#MmessageText").val("");
-	    $("#select-motorbike").val("");
-	    $("#select-client").val("");	
+	    //$("#select-motorbike").val("");
+	    //$("#select-client").val("");	
             traerInformacionMensajes();
             alert("Mensaje creado satisfactoriamente")
         }
@@ -456,8 +456,8 @@ function editarInformacionMensajes(idElemento) {
     let myData4 = {
 	idMessage:idElemento,    
         messageText:$("#MmessageText").val(),
-	motorbike: {id: +$("#select-motorbike").val()},    
-	client: {idClient: +$("#select-client").val()},    
+	//motorbike: {id: +$("#select-motorbike").val()},    
+	//client: {idClient: +$("#select-client").val()},    
 	    
         
     };
@@ -472,8 +472,8 @@ function editarInformacionMensajes(idElemento) {
         success: function (items) {
             $("#resultado4").empty();
 	    $("#MmessageText").val("");
-	    $("#select-motorbike").val("");
-	    $("#select-client").val("");	
+	    //$("#select-motorbike").val("");
+	    //$("#select-client").val("");	
             traerInformacionMensajes();
             alert("El Mensaje se ha Actualizado")
         }
@@ -526,8 +526,8 @@ function pintarRespuestaReservaciones(items) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].startDate + "</td>";
         myTable += "<td>" + items[i].devolutionDate + "</td>";
-	myTable += "<td>" + items[i].motorbike.name + "</td>";
-	myTable += "<td>" + items[i].client.name + "</td>";     
+	//myTable += "<td>" + items[i].motorbike.name + "</td>";
+	//myTable += "<td>" + items[i].client.name + "</td>";     
 	myTable += "<td> <button onclick='editarInformacionReservaciones(" + items[i].idReservation + ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoReservaciones(" + items[i].idReservation + ")'> Eliminar</button>";
         myTable += "</tr>";
