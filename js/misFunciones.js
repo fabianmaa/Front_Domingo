@@ -11,12 +11,7 @@ function traerInformacionMotorbikes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaMotorbikes(items);
-	//let $select = $("#select-motorbike");
-            //$.each(items, function (id, name) {
-                //$select.append('<option value='+name.id+'>'+name.name+'</option>');
-                //console.log("select "+name.id);
-            //});		
-        }
+	}
     })
 }
 function pintarRespuestaMotorbikes(items) {
@@ -147,12 +142,7 @@ function traerInformacionCategorias() {
         success: function (items) {
             console.log(items);
             pintarRespuestaCategorias(items);
-	//let $select = $("#select-category");
-            //$.each(items, function (id, name) {
-                //$select.append('<option value='+name.id+'>'+name.name+'</option>');
-                //console.log("select "+name.id);
-            //}); 	
-        }
+	}
     })
 }
 function pintarRespuestaCategorias(items) {
@@ -265,12 +255,7 @@ function traerInformacionClientes() {
         success: function (items) {
             console.log(items);
             pintarRespuestaClientes(items);
-	    //let $select = $("#select-client");
-            //$.each(items, function (id, name) {
-                //$select.append('<option value='+name.idClient+'>'+name.name+'</option>');
-                //console.log("select "+name.idClient);
-            //});	
-        }
+	}
     })
 }
 function pintarRespuestaClientes(items) {
