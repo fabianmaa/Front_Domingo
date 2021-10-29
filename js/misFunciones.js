@@ -423,9 +423,7 @@ function pintarRespuestaMensajes(items) {
 function guardarInformacionMensajes() {
     let myData4 = {
         messageText:$("#MmessageText").val(),
-	//motorbike: {id: +$("#select-motorbike").val()},    
-	//client: {idClient: +$("#select-client").val()},
-    };
+	};
 	
 	if (myData4.messageText==''){
 			alert("Por favor ingrese un mensaje");
