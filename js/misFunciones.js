@@ -71,7 +71,6 @@ function guardarInformacionMotorbikes() {
             console.log(items);
             
             $("#resultado1").empty();
-            $("#id").val("");
             $("#Mname").val("");
             $("#MBrand").val("");
             $("#Myear").val("");
@@ -104,7 +103,6 @@ function editarInformacionMotorbikes(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado1").empty();
-            $("#id").val("");
             $("#Mname").val("");
             $("#MBrand").val("");
             $("#Myear").val("");
@@ -338,7 +336,7 @@ function guardarInformacionClientes() {
 function editarInformacionClientes(idElemento) {
     let myData3 = {
         idClient:idElemento,
-		email:$("#CLemail").val(),
+	email:$("#CLemail").val(),
         password:$("#CLpassword").val(),
         name:$("#CLname").val(),
         age:$("#CLage").val(),
@@ -354,8 +352,7 @@ function editarInformacionClientes(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado3").empty();
-            $("#idClient").val("");
-	    $("#CLemail").val("");
+            $("#CLemail").val("");
             $("#CLpassword").val("");
             $("#CLname").val("");
             $("#CLage").val("");
@@ -405,9 +402,9 @@ function traerInformacionMensajes() {
 function pintarRespuestaMensajes(items) {
 
     let myTable = "<table>";
-    myTable += "<th> MOTO</th>";
-    myTable += "<th> CLIENTE</th>";	
     myTable += "<th> MENSAJE</th>";
+    myTable += "<th> MOTO</th>";	
+    myTable += "<th> CLIENTE</th>";
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].messageText + "</td>";
@@ -474,8 +471,7 @@ function editarInformacionMensajes(idElemento) {
         datatype: "JSON",
         success: function (items) {
             $("#resultado4").empty();
-	    $("#idMessage").val("");	
-            $("#MmessageText").val("");
+	    $("#MmessageText").val("");
 	    $("#select-motorbike").val("");
 	    $("#select-client").val("");	
             traerInformacionMensajes();
