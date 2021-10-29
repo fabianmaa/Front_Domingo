@@ -402,14 +402,13 @@ function traerInformacionMensajes() {
 function pintarRespuestaMensajes(items) {
 
     let myTable = "<table>";
-    myTable += "<th> MENSAJE</th>";
-    myTable += "<th> MOTO</th>";	
-    myTable += "<th> CLIENTE</th>";
+    myTable += "<th> ID MENSAJE </th>";	
+    myTable += "<th> MENSAJE </th>";
+    
     for (var i = 0; i < items.length; i++) {
         myTable += "<tr>";
+	myTable += "<td>" + items[i].idMessage + "</td>";    
         myTable += "<td>" + items[i].messageText + "</td>";
-	//myTable += "<td>" + items[i].motorbike.name + "</td>";
-	//myTable += "<td>" + items[i].client.name + "</td>";    
 	myTable += "<td> <button onclick='editarInformacionMensajes(" + items[i].idMessage+ ")'> Actualizar</button>";    
         myTable += "<td> <button onclick='borrarElementoMensajes(" + items[i].idMessage + ")'> Eliminar</button>";
         myTable += "</tr>";
@@ -442,9 +441,7 @@ function guardarInformacionMensajes() {
         success: function (items) {
             $("#resultado4").empty();
             $("#MmessageText").val("");
-	    //$("#select-motorbike").val("");
-	    //$("#select-client").val("");	
-            traerInformacionMensajes();
+	    traerInformacionMensajes();
             alert("Mensaje creado satisfactoriamente")
         }
     })};
@@ -456,8 +453,6 @@ function editarInformacionMensajes(idElemento) {
     let myData4 = {
 	idMessage:idElemento,    
         messageText:$("#MmessageText").val(),
-	//motorbike: {id: +$("#select-motorbike").val()},    
-	//client: {idClient: +$("#select-client").val()},    
 	    
         
     };
@@ -472,9 +467,7 @@ function editarInformacionMensajes(idElemento) {
         success: function (items) {
             $("#resultado4").empty();
 	    $("#MmessageText").val("");
-	    //$("#select-motorbike").val("");
-	    //$("#select-client").val("");	
-            traerInformacionMensajes();
+	    traerInformacionMensajes();
             alert("El Mensaje se ha Actualizado")
         }
     });
